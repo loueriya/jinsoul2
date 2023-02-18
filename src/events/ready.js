@@ -1,0 +1,10 @@
+const {ActivityType} = require("discord.js")
+
+module.exports = {
+    name: 'ready',
+    once: true,
+    async execute(client) {
+        console.log('Ready!');
+        client.user.setActivity(`${client.guilds.cache.size} servers `, {type: ActivityType.Watching})
+    },
+};
